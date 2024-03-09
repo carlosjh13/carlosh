@@ -1,0 +1,149 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".registrarse">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtNombreLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="250dp"
+        app:boxStrokeColor="@color/black"
+        app:hintTextColor="@color/yellow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@id/edtCorreoNuevoLayout">
+
+        <EditText
+            android:id="@+id/txtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtCorreoNuevoLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/black"
+        app:hintTextColor="@color/yellow"
+        app:layout_constraintTop_toBottomOf="@id/txtNombreLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"
+
+        app:layout_constraintBottom_toTopOf="@id/edtContraseñaNuevaLayout">
+
+        <EditText
+            android:id="@+id/edtCorreoNuevo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo electrónico"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtContraseñaNuevaLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/black"
+        app:hintTextColor="@color/yellow"
+        app:layout_constraintTop_toBottomOf="@id/edtCorreoNuevoLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="16dp"
+        app:layout_constraintVertical_bias="0.5"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintBottom_toTopOf="@id/edtConfirmarContraseñaNuevoLayout">
+
+        <EditText
+            android:id="@+id/edtContraseñaNueva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:inputType="textPassword" />
+
+        <ProgressBar
+            android:id="@+id/passwordStrengthProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:progress="0"
+            android:max="5"
+            style="?android:attr/progressBarStyleHorizontal"/>
+
+        <TextView
+            android:id="@+id/passwordStrengthText"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passwordStrengthProgressBar"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtConfirmarContraseñaNuevoLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edtContraseñaNuevaLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:boxStrokeColor="@color/black"
+        app:hintTextColor="@color/yellow"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="16dp"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@id/btnRegistrarseNuevo">
+
+        <EditText
+            android:id="@+id/edtConfirmarContraseñaNuevo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirmar contraseña"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnRegistrarseNuevo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrarse"
+        app:layout_constraintTop_toBottomOf="@id/edtConfirmarContraseñaNuevoLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="222dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
